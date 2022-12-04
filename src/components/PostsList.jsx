@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux'
-import { addPost } from '../features/posts/postsSlice'
 import { selectAllPosts } from '../features/posts/postsSlice'
 
 const PostsList = () => {
@@ -15,7 +14,7 @@ const PostsList = () => {
 
     return (
         <section>
-            <h2 className="text-5xl mb-3 font-semibold">Posts</h2>
+            <h2 className="header-2">posts</h2>
             <div className="post-container">
                 {renderedPosts}
             </div>

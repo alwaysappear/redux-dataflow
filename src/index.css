@@ -7,23 +7,56 @@ body {
 }
 
 #root {
-  @apply w-full grid place-items-center;
+  @apply w-[90vw] max-w-[500px] mx-auto;
 }
 
-main {
-  @apply mt-16 px-10;
+section {
+  @apply mt-16 w-full;
+}
+
+.header-2 {
+  @apply capitalize text-4xl font-medium mt-9;
+}
+
+form {
+  @apply flex flex-col gap-4 w-full;
+}
+
+form div {
+  @apply flex flex-col gap-1;
+}
+
+label {
+  @apply text-xl capitalize;
+}
+
+input,
+textarea {
+  @apply rounded-md text-slate-900 px-1 py-0.5;
+}
+
+textarea {
+  @apply w-full h-20;
+}
+
+button {
+  @apply px-2 py-0.5 text-xl capitalize mt-3 rounded-md;
+}
+
+.submit-btn {
+  @apply w-full bg-slate-900;
 }
 
 .post-container {
-  @apply w-full flex flex-col gap-5 items-center;
+  @apply flex flex-col gap-3;
 }
 
 .post {
-  @apply rounded-lg px-7 py-5 border-white border-2 w-full;
+  @apply border-slate-300 border-2 py-5 px-7 rounded-lg;
 }
 
 .post h3 {
-  @apply text-3xl font-medium mb-5;
+  @apply text-3xl mb-2 font-medium;
 }
 
 .post p {

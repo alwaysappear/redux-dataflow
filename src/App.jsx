@@ -1,8 +1,12 @@
+import AddPost from "./components/AddPost"
+import PostsList from "./components/PostsList"
+
 const App = () => {
   return (
-    <main>
-      <p>Greetings - Hello, World!</p>
-    </main>
+    <>
+      <AddPost />
+      <PostsList />
+    </>
   )
 }
 

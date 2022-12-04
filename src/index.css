@@ -7,7 +7,7 @@ body {
 }
 
 #root {
-  @apply w-[90vw] max-w-[500px] mx-auto;
+  @apply w-[90vw] max-w-[500px] mx-auto mb-10;
 }
 
 section {
@@ -52,7 +52,8 @@ button {
 }
 
 .post {
-  @apply border-slate-300 border-2 py-5 px-7 rounded-lg;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  @apply border-slate-300 border-2 py-5 px-7 rounded-lg text-black bg-pry-clr-0;
 }
 
 .post h3 {

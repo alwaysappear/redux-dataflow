@@ -12,9 +12,7 @@ const AddPost = () => {
     const [userId, setUserId] = useState("")
 
     const onSave = () => {
-        if (valid) {
-            dispatch(addPost(title, content, userId))
-        }
+        if (valid) dispatch(addPost(title, content, userId))
 
         setTitle("")
         setContent("")

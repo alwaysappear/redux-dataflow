@@ -1,3 +1,4 @@
+import PostAuthor from './PostAuthor'
 import { useSelector } from 'react-redux'
 import { selectAllPosts } from '../features/posts/postsSlice'
 
@@ -8,7 +9,10 @@ const PostsList = () => {
         posts.map(post => (
             <article key={post.id} className="post">
                 <h3>{post.title}</h3>
-                <p>{post.content.substring(0, 100)}</p>
+                <p className="text-lg">{post.content.substring(0, 52)}</p>
+                <p className="text-xs">
+                    <PostAuthor userId={post.id} />
+                </p>
             </article>
         ))
 

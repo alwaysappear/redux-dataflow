@@ -3,7 +3,7 @@
 @tailwind components;
 
 body {
-  @apply font-cabin bg-slate-600 text-white;
+  @apply font-cabin bg-slate-600 text-pry-clr-0;
 }
 
 #root {
@@ -32,7 +32,7 @@ label {
 
 input,
 textarea {
-  @apply rounded-md text-slate-900 px-1 py-0.5;
+  @apply rounded-md text-slate-900 px-1 py-0.5 bg-pry-clr-0;
 }
 
 textarea {
@@ -57,9 +57,9 @@ button {
 }
 
 .post h3 {
-  @apply text-3xl mb-2 font-medium;
+  @apply text-2xl mb-2 font-medium;
 }
 
-.post p {
-  @apply text-lg;
+form div select {
+  @apply text-black bg-pry-clr-0 flex flex-col gap-5
 }

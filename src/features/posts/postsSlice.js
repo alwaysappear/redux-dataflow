@@ -1,17 +1,22 @@
-import {sub} from 'date-fns'
+import { sub } from 'date-fns'
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
 const initialState = [
-    { id: '1', title: "Learning Redux Toolkit",
-    content: "I have been enjoying it.",
-    date: sub(new Date(), {
-        minutes: 10
-    }).toISOString()},
-    { id: '2', title: "Learning Frontend",
-    content: "I have not encountered literally anything hard since I have been learning.",
-    date: sub(new Date(), {
-        minutes: 5
-    }).toISOString()}
+    {
+        id: '1',
+        title: "Learning Redux Toolkit",
+        content: "I have been enjoying it.",
+        date: sub(new Date(), {
+            minutes: 10
+        }).toISOString(),
+        reactions: {
+            wow: 0,
+            heart: 0,
+            letgo: 0,
+            coffe: 0,
+            thumbsUp: 0,
+        }
+    }
 ]
 
 const postsSlice = createSlice({
@@ -29,7 +34,14 @@ const postsSlice = createSlice({
                         title,
                         content,
                         userId,
-                        date: new Date().toISOString()
+                        date: new Date().toISOString(),
+                        reactions: {
+                            wow: 0,
+                            heart: 0,
+                            letgo: 0,
+                            coffe: 0,
+                            thumbsUp: 0,
+                        }
                     }
                 }
             }

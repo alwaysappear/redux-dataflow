@@ -6,8 +6,10 @@ import { selectAllPosts } from '../features/posts/postsSlice'
 const PostsList = () => {
     const posts = useSelector(selectAllPosts)
 
+    const orderedPosts = posts.slice().sort((a, b) => b.date.localeCompare(a.date))
+
     const renderedPosts =
-        posts.map(post => (
+        orderedPosts.map(post => (
             <article key={post.id} className="post">
                 <h3>{post.title}</h3>
                 <p className="text-lg">{post.content.substring(0, 52)}</p>
